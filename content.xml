@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<roster>
+    <books book="book3" author="author3" publisher="publisher3" file="file3.pdf" pages="2" year="1900">
+        <tracks track="track3_1" composer="composer3_1" notation="" page="1"/>
+        <tracks track="track3_2" composer="composer3_2" notation="" page="2"/>
+    </books>
+    <books book="book4" author="author4" publisher="publisher4" file="file4.pdf" pages="3" year="1900">
+        <tracks track="track4_1" composer="composer4_1" notation="" page="1"/>
+        <tracks track="track4_2" composer="composer4_2" notation="" page="2"/>
+        <tracks track="track4_3" composer="composer4_3" notation="" page="3"/>
+    </books>
+</roster>
+
