@@ -38,7 +38,7 @@ CREATE MEMORY TABLE PUBLIC.BOOK(ID BIGINT NOT NULL PRIMARY KEY,AUTHOR VARCHAR(25
 CREATE MEMORY TABLE PUBLIC.KEY(ID BIGINT NOT NULL PRIMARY KEY,BRIEF VARCHAR(255),TITLE VARCHAR(255))
 CREATE MEMORY TABLE PUBLIC.TRACK(ID BIGINT NOT NULL PRIMARY KEY,COMPOSER VARCHAR(255),NOTATION VARCHAR(16777216),PAGE INTEGER NOT NULL,PLAY_FLAG BOOLEAN NOT NULL,TITLE VARCHAR(255),BOOK_ID BIGINT,KEY_ID BIGINT,CONSTRAINT FKKIYVB7KPAYPEYI742UF2O9VS3 FOREIGN KEY(BOOK_ID) REFERENCES PUBLIC.BOOK(ID),CONSTRAINT FKBP8Y41MMOY0ENBGM7AR0WGD68 FOREIGN KEY(KEY_ID) REFERENCES PUBLIC.KEY(ID))
 ALTER SEQUENCE SYSTEM_LOBS.LOB_ID RESTART WITH 1
-ALTER SEQUENCE PUBLIC.HIBERNATE_SEQUENCE RESTART WITH 12915
+ALTER SEQUENCE PUBLIC.HIBERNATE_SEQUENCE RESTART WITH 12928
 SET DATABASE DEFAULT INITIAL SCHEMA PUBLIC
 GRANT USAGE ON DOMAIN INFORMATION_SCHEMA.SQL_IDENTIFIER TO PUBLIC
 GRANT USAGE ON DOMAIN INFORMATION_SCHEMA.YES_OR_NO TO PUBLIC
@@ -570,6 +570,7 @@ INSERT INTO BOOK VALUES(12870,'Ken-Ichi Ebe','<html>\u000a<body>\u000a</body>\u0
 INSERT INTO BOOK VALUES(12889,'Rednex','<html>\u000a<body>\u000a</body>\u000a</html>','Wish_you_were_here.pdf',1,'','Wish you were here',0)
 INSERT INTO BOOK VALUES(12891,'Dan Toway','<html>\u000a<body>\u000a</body>\u000a</html>','Jazz_guitar_Chord_Melodies.pdf',65,'Hal Leonard','Jazz Guitar Chord Melodies',0)
 INSERT INTO BOOK VALUES(12904,'','<html>\u000a<body>\u000a</body>\u000a</html>','JAZZ_GUITAR_SONGS_BY_HAL_LEONARD_With_Audio_Files.pdf',69,'Hal Leonard','Jazz Guitar Songs',0)
+INSERT INTO BOOK VALUES(12915,'J. Douglas Esmond','<html>\u000a<body>\u000a</body>\u000a</html>','Jazzical_Guitar_-_Classical_Favorites_Played_in_Jazz_Style.pdf',36,'Centerstream','Jazzical Guitar. Classical Favorites Played in Jazz Style',2015)
 INSERT INTO KEY VALUES(1,'C','\u0414\u043e-\u043c\u0430\u0436\u043e\u0440')
 INSERT INTO KEY VALUES(2,'G','\u0421\u043e\u043b\u044c-\u043c\u0430\u0436\u043e\u0440')
 INSERT INTO KEY VALUES(3,'D','\u0420\u0435-\u043c\u0430\u0436\u043e\u0440')
@@ -12696,3 +12697,15 @@ INSERT INTO TRACK VALUES(12911,'Mercer Ellington','',49,FALSE,'Things Ain''t Wha
 INSERT INTO TRACK VALUES(12912,'Karl Suessdorf','',56,FALSE,'Moonlight In Vermont',12904,1)
 INSERT INTO TRACK VALUES(12913,'Duke Ellington','',60,FALSE,'Satin Doll',12904,13)
 INSERT INTO TRACK VALUES(12914,'Kurt Weill','',66,FALSE,'Speak Low',12904,12)
+INSERT INTO TRACK VALUES(12916,'L.V.Beethoven','',6,FALSE,'Joyful Jaunt (based to "Ode to joy")',12915,1)
+INSERT INTO TRACK VALUES(12917,'Johannes Brahms','',8,FALSE,'Cool Dreams (Brahm''s Lullaby)',12915,2)
+INSERT INTO TRACK VALUES(12918,'W.A.Mozart','',10,FALSE,'The Missing Variation (based on 12 variations on "Ah, Vous Diraj-je Maman")',12915,2)
+INSERT INTO TRACK VALUES(12919,'L.V.Beethoven','',12,FALSE,'For Evelyn (based on "Fur Elise")',12915,13)
+INSERT INTO TRACK VALUES(12920,'W.A.Mozart','',14,FALSE,'A Night on the Town (based on "Eine Kleine Nachtmusic")',12915,1)
+INSERT INTO TRACK VALUES(12921,'G.F.Handel','',16,FALSE,'The Queen of Shee-Bop (based on "Arrival of the Queen of Sheba")',12915,2)
+INSERT INTO TRACK VALUES(12922,'J.S.Bach','',18,FALSE,'Jazzy Joy (based on "Jesu, Joy of Man''s Desiring")',12915,2)
+INSERT INTO TRACK VALUES(12923,'J.S.Bach','',20,FALSE,'Jazzy G March (basen on "Minuet in G")',12915,2)
+INSERT INTO TRACK VALUES(12924,'Luigi Boccherini','',22,FALSE,'Bocc''s Bop (based on "Minuet for String Quintet, Op.11, No.5") ',12915,2)
+INSERT INTO TRACK VALUES(12925,'Edvard Grieg','',24,FALSE,'Cool Shuffle (based on "Andante from Holberg Suite")',12915,3)
+INSERT INTO TRACK VALUES(12926,'Johann Pachelbel','',26,FALSE,'Canon in Blue (based on "Canon in D")',12915,3)
+INSERT INTO TRACK VALUES(12927,'Antoine Dvorak','',28,FALSE,'It''s a "New", New World (based on a theme from the 2nd Movement of the "9th Symphony")',12915,1)
